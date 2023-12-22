@@ -7,6 +7,10 @@ on:
     branches:
       - develop
 
+env:
+  TARGETOS: linux
+  TARGETARCH: amd64
+
 # блок задач який налаштовано на запуск завдання на новій ВМ з останньою версією ubuntu
 jobs:
   ci:
