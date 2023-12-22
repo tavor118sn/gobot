@@ -5,9 +5,9 @@
 replicaCount: 1
 image:
   repository: andrewmoonlight
-  tag: "v1.2.0-dd0337b"
-  arch: ""
-  os: ""
+  tag: "v1.2.0-1ff7d8d"
+  arch: "amd64"
+  os: "linux"
 secret:
   name: "gobot"
   env: "TELE_TOKEN"
