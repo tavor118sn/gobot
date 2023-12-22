@@ -2,12 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+# follow next example
+# us-east1-docker.pkg.dev/gobot-2023/gobot-dev-repo/gobot:v1.2.0-1ff7d8d-amd64
 replicaCount: 1
 image:
-  repository: andrewmoonlight
+  registry: "us-east1-docker.pkg.dev"
+  repository: "gobot-2023/gobot-dev-repo"
   tag: "v1.2.0-1ff7d8d"
-  arch: "amd64"
-  os: "linux"
+  os: linux
+  arch: amd64
 secret:
   name: "gobot"
   env: "TELE_TOKEN"
