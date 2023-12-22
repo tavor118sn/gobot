@@ -26,13 +26,13 @@ jobs:
       - name: Run test
         run: make test
 
-      # авторизація Google Registry
-      - name: Login to GAR
+      # авторизація на GHCR
+      - name: 'Login to GitHub Container Registry'
         uses: docker/login-action@v3
         with:
-          registry: us-east1-docker.pkg.dev
-          username: _json_key
-          password: ${{ secrets.GCP_SA_KEY }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
 
       # збираємо образ з використання змінної середовища 
       - name: Build&Push
