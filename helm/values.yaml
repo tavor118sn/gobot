@@ -8,7 +8,7 @@ replicaCount: 1
 image:
   registry: "us-east1-docker.pkg.dev"
   repository: "gobot-2023/gobot-dev-repo"
-  tag: "v1.2.0-1ff7d8d"
+  tag: "v1.2.0-6d3e79b"
   os: linux
   arch: amd64
 secret:
