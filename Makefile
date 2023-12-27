@@ -5,7 +5,7 @@ GCLOUD_REGION=us-east1
 GCLOUD_PROJECT=gobot-2023
 GCLOUD_REPO=gobot-dev-repo
 
-GITHUN_REPO=ghcr.io/tavor118sn
+GITHUB_REPO=ghcr.io/tavor118sn
 
 #linux darwin windows
 TARGETOS=linux
@@ -18,14 +18,14 @@ build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o gobot -ldflags "-X="github.com/tavor118sn/gobot/cmd.appVersion=${VERSION}
 
 image:
-	docker build --platform=linux/amd64 . -t $(GITHUN_REPO)/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH} --build-arg TARGETOS=${TARGETOS} --build-arg TARGETARCH=${TARGETARCH}
+	docker build --platform=linux/amd64 . -t $(GITHUB_REPO)/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH} --build-arg TARGETOS=${TARGETOS} --build-arg TARGETARCH=${TARGETARCH}
 
 push:
-	docker push $(GITHUN_REPO)/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker push $(GITHUB_REPO)/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 clean:
 	rm -rf gobot
-	docker rmi $(GITHUN_REPO)/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker rmi $(GITHUB_REPO)/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 format:
 	gofmt -s -w ./
