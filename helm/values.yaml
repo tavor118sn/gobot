@@ -7,7 +7,7 @@
 replicaCount: 1
 image:
   registry: "ghcr.io"
-  repository: "tavor118/gobot"
+  repository: "tavor118sn/gobot"
   tag: "v1.2.0-1e25dca"
   os: linux
   arch: amd64
