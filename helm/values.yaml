@@ -2,11 +2,14 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+# follow next example
+# ghcr.io/tavor118sn/gobot:v1.2.0-bba02e0-amd64
 replicaCount: 1
-
 image:
-  repository: andrewmoonlight
-  tag: "v1.1.0-ef0e3fa"
+  registry: "ghcr.io"
+  repository: "tavor118/gobot"
+  tag: "v1.2.0-0514ea1"
+  os: linux
   arch: amd64
 secret:
   name: "gobot"
